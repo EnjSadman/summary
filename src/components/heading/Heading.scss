@@ -1,0 +1,16 @@
+.heading {
+  position: sticky;
+  z-index: 10;
+  background-color: #004aad;
+
+  &__navigation {
+    &--link {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
