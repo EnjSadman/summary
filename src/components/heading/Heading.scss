@@ -1,11 +1,32 @@
+@keyframes heading-float {
+  from {top:0}
+  to {top:100px}
+}
+
 .heading {
-  position: sticky;
+  top: 0;
+  position: fixed;
   z-index: 10;
   background-color: #004aad;
 
+  display: flex;
+  
+  width:100%;
+
+  justify-content: center;
+
+  transform: translateY(-100px);
+  animation: heading-float;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+
   &__navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
     &--link {
       color: white;
+      text-transform: uppercase;
       text-decoration: none;
 
       &:hover {
