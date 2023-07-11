@@ -1,13 +1,13 @@
 @keyframes heading-float {
-  from {top:0}
-  to {top:100px}
+  from {top:0; opacity:0.5}
+  to {top:100px; opacity: 1;}
 }
 
 .heading {
   top: 0;
   position: fixed;
   z-index: 10;
-  background-color: #004aad;
+  background-color: $blue_main;
 
   display: flex;
   
@@ -25,13 +25,44 @@
     justify-content: space-between;
     padding: 20px 40px;
     &--link {
-      color: white;
+      display: flex;
+      align-items: center;
+
+      color: $white;
       text-transform: uppercase;
       text-decoration: none;
+
+      margin-right: 20px;
 
       &:hover {
         text-decoration: underline;
       }
     }
+  }
+}
+
+.github {
+  &::after {
+    display: inline-block;
+    content: '';
+    margin-left: 8px;
+    background-image: url('../../github-142-svgrepo-com.svg');
+    filter: invert(94%) sepia(100%) saturate(0%) hue-rotate(357deg) brightness(104%) contrast(103%);
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.linkedin {
+  &::after {
+    display: inline-block;
+    content: '';
+    margin-left: 8px;
+    background-image: url('../../linkedin-round-svgrepo-com.svg');
+    filter: invert(94%) sepia(100%) saturate(0%) hue-rotate(357deg) brightness(104%) contrast(103%);
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
   }
 }
